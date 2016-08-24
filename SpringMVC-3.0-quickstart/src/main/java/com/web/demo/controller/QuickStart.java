@@ -1,24 +1,29 @@
 package com.web.demo.controller;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * Created by wuxing on 16/8/23.
  */
 @Controller
-@RequestMapping("/welcome")
 public class QuickStart {
 
-    @RequestMapping(value="/hello",method = RequestMethod.GET)
-    public ModelAndView handleRequest(
-            HttpServletRequest request,
-            HttpServletResponse response) {
-        System.out.println("--------------hello world! 世界你好！--------------------");
-        return new ModelAndView("/helloWorld");
+    private final Log logger = LogFactory.getLog(QuickStart.class);
+
+    @RequestMapping(value="/",method = RequestMethod.HEAD)
+    public String head() {
+        return "quickStart.jsp";
+    }
+
+    @RequestMapping(value={"/index","/"},method = RequestMethod.GET)
+    public String index(Model model) throws Exception {
+        logger.info("==========processed by index==========");
+        model.addAttribute("msg", "QuickStart");
+        return "quickStart.jsp";
     }
 }
