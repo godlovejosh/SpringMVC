@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework.web.my.demo</groupId>
-    <artifactId>SpringMVC-4.0-quickstart</artifactId>
+    <artifactId>springmvc-4.0-quickstart</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>SpringMVC-4.0 quickstart</name>
+    <name>SpringMVC-4.0 QuickStart</name>
     <packaging>war</packaging>
 
     <properties>
