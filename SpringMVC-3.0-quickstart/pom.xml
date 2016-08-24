@@ -6,7 +6,7 @@
     <groupId>org.springframework.web.my.demo</groupId>
     <artifactId>SpringMVC-3.0-quickstart</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>SpringMVC-3.0-quickstart</name>
+    <name>SpringMVC-3.0 quickstart</name>
     <packaging>war</packaging>
 
     <properties>
