@@ -1,0 +1,12 @@
+#parse("layouts/header.vm")
+<div id="wrapper">
+	<!-- Navigation -->
+##    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+##        #parse("layouts/nav.vm")
+##        #parse("layouts/menu.vm")
+##    </nav>
+	<div id="page-wrapper">
+		$screen_content
+	</div>
+</div>
+###parse("layouts/footer.vm")

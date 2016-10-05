@@ -3,6 +3,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.pamirs</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
     <groupId>org.springframework.web.my.demo</groupId>
     <artifactId>springmvc-resteasy</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -11,7 +17,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring_version>4.1.5.RELEASE</spring_version>
+        <spring_version>3.2.5.RELEASE</spring_version>
+        <resteasy_version>2.2.1.GA</resteasy_version>
+        <bop_version>0.0.1-SNAPSHOT</bop_version>
     </properties>
 
     <dependencies>
@@ -31,6 +39,201 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring_version}</version>
+        </dependency>
+        <!-- ================================================= -->
+        <!-- Spring -->
+        <!-- ================================================= -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring_version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring_version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring_version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring_version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- ================================================= -->
+        <!-- resteasy -->
+        <!-- ================================================= -->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-spring</artifactId>
+            <version>${resteasy_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>jaxrs-api</artifactId>
+            <version>${resteasy_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-multipart-provider</artifactId>
+            <version>${resteasy_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxb-provider</artifactId>
+            <version>${resteasy_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>async-http-servlet-3.0</artifactId>
+            <version>${resteasy_version}</version>
+        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.jboss.resteasy</groupId>-->
+        <!--<artifactId>resteasy-hibernatevalidator-provider</artifactId>-->
+        <!--<version>${resteasy_version}</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jackson-provider</artifactId>
+            <version>${resteasy_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jsapi</artifactId>
+            <version>${resteasy_version}</version>
+        </dependency>
+        <!-- ================================================= -->
+        <!-- velocity -->
+        <!-- ================================================= -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-tools</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <!-- ================================================= -->
+        <!-- velocity 配置依赖 -->
+        <!-- ================================================= -->
+        <dependency>
+            <groupId>com.pamirs.caspian.api</groupId>
+            <artifactId>caspian-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pamirs.caspian.commons</groupId>
+            <artifactId>caspian-commons</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!-- ================================================= -->
+        <!-- bop -->
+        <!-- ================================================= -->
+        <dependency>
+            <groupId>com.blc.bop</groupId>
+            <artifactId>bop-mapping</artifactId>
+            <version>${bop_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.blc.bop</groupId>
+            <artifactId>bop-core</artifactId>
+            <version>${bop_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.blc.bop</groupId>
+            <artifactId>bop-operation</artifactId>
+            <version>${bop_version}</version>
+        </dependency>
+        <!-- jdbc 驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.21</version>
+        </dependency>
+        <!-- 数据库连接池 -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.6</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-mock</artifactId>
+            <version>2.0.8</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.directwebremoting</groupId>
+            <artifactId>dwr</artifactId>
+            <version>3.0.rc2</version>
+        </dependency>
+        <!-- ================================================= -->
+        <!-- pamirs-configure -->
+        <!-- ================================================= -->
+        <dependency>
+            <groupId>com.pamirs.configure</groupId>
+            <artifactId>configure-client</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!-- ================================================= -->
+        <!-- pamirs-apush -->
+        <!-- ================================================= -->
+        <dependency>
+            <groupId>com.pamirs.intl.base</groupId>
+            <artifactId>apush-authorize-util</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pamirs.intl.base</groupId>
+            <artifactId>apush-sender-java</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

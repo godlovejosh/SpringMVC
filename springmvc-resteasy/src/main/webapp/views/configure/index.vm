@@ -1,0 +1,35 @@
+<link href="/assets/configure/css/index.css" rel="stylesheet">
+<div class="outer">
+    <div class="title">
+        <span>APP</span>
+        <select id="changeApp">
+            <option value="app01">app01</option>
+            <option value="app02">app02</option>
+            <option value="app03">app03</option>
+            <option value="app04">app04</option>
+        </select>
+    </div>
+    <div class="center">
+        <span class="title2">config</span>
+        <textarea class="selection" id="config"></textarea>
+        <button id="publishBtn">发布</button>
+    </div>
+    <div class="lines">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+        <span class="line4"></span>
+        <span class="line5"></span>
+        <span class="line6"></span>
+        <div></div>
+    </div>
+    <div class="bottom">
+        <form action="" name="myform">
+            <textarea class="app01Conf"></textarea>
+            <textarea class="app02Conf"></textarea>
+            <textarea class="app03Conf"></textarea>
+            <textarea class="app04Conf"></textarea>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/configure/js/index.js"></script>

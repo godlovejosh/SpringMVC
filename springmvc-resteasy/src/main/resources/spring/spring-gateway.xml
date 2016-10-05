@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://code.alibabatech.com/schema/dubbo
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+       default-autowire="byName">
+
+    <!--<bean id="fountainGatewaySystemLoader" class="com.blc.bop.operation.load.SystemLoaderImpl" init-method="loader">-->
+
+    <!--</bean>-->
+    <!--<bean id="registry" class="com.alibaba.dubbo.config.RegistryConfig">-->
+        <!--<property name="address">-->
+            <!--<value>zookeeper://zk.api.500mi.com:2181</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<dubbo:application name="fountain" owner="fountain"/>-->
+    <!--<dubbo:protocol name="dubbo" port="17173"/>-->
+
+    <!--<bean id="pipelineSelector" class="com.blc.bop.operation.pipeline.ScriptPipelineSelector">-->
+    <!--</bean>-->
+
+    <!--<bean id="bipEngine" class="com.blc.bop.core.engine.BipEngine">-->
+    <!--</bean>-->
+
+    <!--<bean id="authService" class="com.blc.bop.operation.auth.BlcUserAuthServiceImpl"></bean>-->
+
+    <!--<bean id="jedisHelp" class="com.blc.bop.operation.auth.JedisHelp" init-method="init"></bean>-->
+
+
+    <!--<bean id="springUtils" class="com.blc.bop.core.util.SpringUtils"></bean>-->
+
+
+    <!--<bean id="itemSearchAO" class="com.wbm.carriage.crm.ao.ItemSearchAO"></bean>-->
+    <!--<bean id="springBeanUtils" class="com.wbm.carriage.commons.util.SpringBeanUtils"></bean>-->
+
+    <!--<bean id="authService" class="com.pamirs.demo.service.configure.App1DailyService"></bean>-->
+    <!--<bean id="App1DailyService" class="com.pamirs.demo.service.configure.UseConfigureService"></bean>-->
+    <!--<bean id="App1OnlineService" class="com.pamirs.demo.service.configure.App1OnlineService"></bean>-->
+    <!--<bean id="App2DailyService" class="com.pamirs.demo.service.configure.App2DailyService"></bean>-->
+    <!--<bean id="App2OnlineService" class="com.pamirs.demo.service.configure.App2OnlineService"></bean>-->
+
+</beans>

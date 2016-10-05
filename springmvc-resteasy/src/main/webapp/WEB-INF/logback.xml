@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d %level [%thread] [%file:%line] - %msg %n</Pattern>
+    </layout>
+  </appender>
+  
+  <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+    <target>System.err</target>
+	<layout class="ch.qos.logback.classic.PatternLayout">
+		<Pattern>%d %level [%thread] [%file:%line] - %msg %n</Pattern>
+    </layout>
+  </appender>
+   
+  <appender name="R" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>${user.home}/logs/fountain_app.log</File>
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <Pattern>%d %level [%thread] [%file:%line] - %msg %n</Pattern>
+    </layout>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <FileNamePattern>logs/fountain_app.log.%d{yyyy-MM-dd}.log</FileNamePattern>
+    </rollingPolicy>
+  </appender>
+  
+  <logger name="com.wbm" level="${foutain.log.level}">
+	  <appender-ref ref="R"/>
+  </logger>
+  <logger name="com.blc" level="${foutain.log.level}">
+	  <appender-ref ref="R"/>
+  </logger>
+  <logger name="org.springframework" level="${foutain.log.other.level}">
+	  <appender-ref ref="R"/>
+  </logger>
+  <logger name="org.apache.ibatis" level="${foutain.log.other.level}">
+  	  <appender-ref ref="R"/>
+  </logger>
+  <logger name="java.sql" level="${foutain.log.other.level}">
+  	  <appender-ref ref="R"/>
+  </logger>
+
+  <logger name="org.apache.velocity" level="ERROR"/> 
+  <logger name="net.sf.ehcache" level="WARN"/>
+  
+  <root level="ERROR">
+    <appender-ref ref="STDOUT"/>
+    <appender-ref ref="R"/>
+  </root>
+</configuration>
